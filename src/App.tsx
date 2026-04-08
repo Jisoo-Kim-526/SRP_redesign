@@ -6,6 +6,7 @@ import TitleBar from './components/TitleBar'
 import TopResultsSection from './components/TopResultsSection'
 import AllResultsSection from './components/AllResultsSection'
 import SlackbotPane from './components/SlackbotPane'
+import SRPMostly2Layout from './components/SRPMostly2Layout'
 
 const pages = ['SRP mostly 1', 'SRP mostly 2']
 
@@ -45,6 +46,17 @@ export default function App() {
             {splitViewOpen && (
               <SlackbotPane onClose={() => setSplitViewOpen(false)} />
             )}
+          </div>
+        </div>
+      ) : activePage === 1 ? (
+        <div className="slack-window">
+          <TopBar />
+          <div className="slack-body">
+            <NavBar />
+            <div className="main-content">
+              <TitleBar />
+              <SRPMostly2Layout />
+            </div>
           </div>
         </div>
       ) : (

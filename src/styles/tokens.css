@@ -8,6 +8,7 @@
   --dt_color-ctr-sec: #f8f8f8;
 
   /* Outline */
+  --dt_color-otl-sec: rgba(94, 93, 96, 0.45);
   --dt_color-otl-ter: rgba(94, 93, 96, 0.13);
 
   /* Content */

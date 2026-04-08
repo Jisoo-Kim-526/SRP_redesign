@@ -1,0 +1,46 @@
+.filter-pills-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 8px;
+}
+
+.filter-pills-row__pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fpill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding-left: 12px;
+  padding-right: 8px;
+  border: 1px solid rgba(94, 93, 96, 0.13);
+  border-radius: 8px;
+  background: var(--dt_color-base-pry);
+  gap: 0;
+  cursor: pointer;
+}
+
+.fpill--sort {
+  padding: 0 8px;
+}
+
+.fpill__icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.fpill__label {
+  font-family: 'Lato', sans-serif;
+  font-size: var(--dt_static_type-size-micro);
+  font-weight: var(--dt_static_type-weight-bold);
+  line-height: var(--dt_static_type-lh-caption);
+  color: var(--dt_color-content-sec);
+  white-space: nowrap;
+  padding: 0 4px;
+}

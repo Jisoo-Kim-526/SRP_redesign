@@ -1,0 +1,15 @@
+.cat-sidebar {
+  width: 219px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cat-sidebar__group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}

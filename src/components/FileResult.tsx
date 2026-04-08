@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import './FileResult.css'
 
-const imgFileThumbnail = "https://www.figma.com/api/mcp/asset/50a28c82-3e51-41a9-9ae3-e4d9d4e71226";
-const imgIcon = "https://www.figma.com/api/mcp/asset/04113803-3bf1-4e49-9167-d960e617e2be";
-const imgAvatar = "https://www.figma.com/api/mcp/asset/1daa55a0-1bf0-4826-8936-ceab0c256cc3";
-
 interface FileResultProps {
   title: string
   author: string
@@ -12,9 +8,10 @@ interface FileResultProps {
   timestamp: string
   content: string
   fullContent?: string
+  iconNode?: React.ReactNode
 }
 
-export default function FileResult({ title, author, readTime, timestamp, content, fullContent }: FileResultProps) {
+export default function FileResult({ title, author, readTime, timestamp, content, fullContent, iconNode }: FileResultProps) {
   const [hovered, setHovered] = useState(false)
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
 
@@ -31,13 +28,7 @@ export default function FileResult({ title, author, readTime, timestamp, content
     >
       <div className="file-result__thumb-wrap">
         <div className="file-result__thumb">
-          <img src={imgFileThumbnail} alt="" className="file-result__thumb-bg" />
-          <div className="file-result__thumb-icon">
-            <img src={imgIcon} alt="" />
-          </div>
-        </div>
-        <div className="file-result__thumb-avatar">
-          <img src={imgAvatar} alt="" className="file-result__thumb-avatar-img" />
+          {iconNode}
         </div>
       </div>
 
@@ -64,10 +55,7 @@ export default function FileResult({ title, author, readTime, timestamp, content
         >
           <div className="file-result__preview-header">
             <div className="file-result__preview-thumb">
-              <img src={imgFileThumbnail} alt="" className="file-result__thumb-bg" />
-              <div className="file-result__thumb-icon">
-                <img src={imgIcon} alt="" />
-              </div>
+              {iconNode}
             </div>
             <div className="file-result__preview-meta">
               <span className="file-result__preview-title">{title}</span>
