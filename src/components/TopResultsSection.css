@@ -1,0 +1,60 @@
+.top-results {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.top-results__card {
+  width: 609px;
+  flex-shrink: 0;
+  border: 1px solid var(--dt_color-otl-ter);
+  border-radius: var(--dt_radius-card);
+  background: var(--dt_color-ctr-pry);
+  overflow: visible;
+}
+
+.top-results__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 20px;
+  background: var(--dt_color-ctr-sec);
+  border-bottom: 1px solid var(--dt_color-otl-ter);
+  border-radius: var(--dt_radius-card) var(--dt_radius-card) 0 0;
+}
+
+.top-results__header-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.top-results__header-label {
+  font-size: var(--dt_static_type-size-caption);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-bold);
+  color: var(--dt_color-content-pry);
+}
+
+.top-results__list {
+  padding-bottom: 0;
+}
+
+.top-results__divider {
+  height: 1px;
+  background: var(--dt_color-otl-ter);
+}
+
+/* Stacked layout when split view is open */
+.top-results--stacked {
+  flex-direction: column;
+}
+
+.top-results--stacked .top-results__card {
+  width: 100%;
+}
+
+.top-results--stacked .ai-card {
+  height: 208px;
+  flex: none;
+  width: 100%;
+}

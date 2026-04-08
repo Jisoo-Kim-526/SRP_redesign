@@ -1,0 +1,255 @@
+.ai-card {
+  background: var(--dt_color-ctr-sec);
+  border-radius: var(--dt_radius-card);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  height: 416px;
+  flex: 1;
+  min-width: 0;
+}
+
+.ai-card__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.ai-card__title {
+  font-size: var(--dt_static_type-size-caption);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-bold);
+  color: var(--dt_color-content-pry);
+}
+
+.ai-card__divider {
+  height: 1px;
+  background: var(--dt_color-otl-ter);
+  flex-shrink: 0;
+}
+
+.ai-card__body {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.ai-card__text {
+  font-size: var(--dt_static_type-size-base);
+  line-height: var(--dt_static_type-lh-base);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-pry);
+}
+
+.ai-card__text p {
+  margin-bottom: 8px;
+}
+
+.ai-card__text strong {
+  font-weight: var(--dt_static_type-weight-bold);
+}
+
+.ai-card__text ul,
+.ai-card__text ol {
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+
+.ai-card__text ul {
+  list-style: disc;
+}
+
+.ai-card__text ol {
+  list-style: decimal;
+}
+
+.ai-card__text li {
+  font-size: var(--dt_static_type-size-base);
+  line-height: var(--dt_static_type-lh-base);
+}
+
+.ai-card__mention {
+  color: var(--dt_color-content-hgl-1);
+}
+
+.ai-card__fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 109px;
+  background: linear-gradient(to bottom, rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0.85) 40%, #f8f8f8 70%);
+  border-radius: 0 0 var(--dt_radius-card) var(--dt_radius-card);
+  pointer-events: none;
+}
+
+.ai-card__readmore {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--dt_static_type-size-caption);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-bold);
+  color: var(--dt_color-content-hgl-1);
+  z-index: 1;
+}
+
+/* Slackbot icon */
+.slackbot-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.slackbot-icon__bg {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: white;
+}
+
+.slackbot-icon__q {
+  position: absolute;
+  width: 7.562px;
+  height: 7.562px;
+  display: block;
+}
+
+.slackbot-icon__q--br {
+  left: 10.44px;
+  top: 10.44px;
+}
+
+.slackbot-icon__q--tr {
+  left: 10.44px;
+  top: 2px;
+}
+
+.slackbot-icon__q--bl {
+  left: 2px;
+  top: 10.44px;
+}
+
+.slackbot-icon__q--tl {
+  left: 2px;
+  top: 2px;
+}
+
+/* Slackbot face */
+.slackbot-face__brow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slackbot-face__brow--l {
+  left: 3.09px;
+  top: 6.65px;
+  width: 2.094px;
+  height: 0.76px;
+}
+
+.slackbot-face__brow--l img {
+  width: 2.081px;
+  height: 0.724px;
+  transform: rotate(-179deg);
+}
+
+.slackbot-face__brow--r {
+  left: 14.81px;
+  top: 6.5px;
+  width: 2.094px;
+  height: 0.729px;
+}
+
+.slackbot-face__brow--r img {
+  width: 2.082px;
+  height: 0.693px;
+  transform: rotate(-1deg) scaleY(-1);
+}
+
+.slackbot-face__eye {
+  position: absolute;
+  width: 2.5px;
+  height: 2.5px;
+}
+
+.slackbot-face__eye img {
+  position: absolute;
+  inset: -21.25%;
+  width: 142.5%;
+  height: 142.5%;
+}
+
+.slackbot-face__eye--l {
+  left: 3.47px;
+  top: 8.78px;
+}
+
+.slackbot-face__eye--r {
+  left: 14.03px;
+  top: 8.78px;
+}
+
+.slackbot-face__pupil {
+  position: absolute;
+  width: 0.909px;
+  height: 0.897px;
+}
+
+.slackbot-face__pupil img {
+  width: 100%;
+  height: 100%;
+}
+
+.slackbot-face__pupil--l {
+  left: 4.75px;
+  top: 9.1px;
+}
+
+.slackbot-face__pupil--r {
+  left: 15.31px;
+  top: 9.1px;
+}
+
+.slackbot-face__mouth {
+  position: absolute;
+  left: 7.78px;
+  top: 10.56px;
+  width: 4.437px;
+  height: 0.704px;
+}
+
+.slackbot-face__mouth img {
+  position: absolute;
+  inset: -66.56% -10.56% -66.55% -10.56%;
+  width: 121.12%;
+  height: 233.11%;
+}
+
+.slackbot-face__smile {
+  position: absolute;
+  left: 9.09px;
+  top: 12.73px;
+  width: 1.781px;
+  height: 0.131px;
+}
+
+.slackbot-face__smile img {
+  position: absolute;
+  inset: -357.32% -26.32% -357.22% -26.32%;
+  width: 152.64%;
+  height: 814.54%;
+}

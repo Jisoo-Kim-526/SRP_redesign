@@ -1,0 +1,446 @@
+.slackbot-pane {
+  width: 353px;
+  flex-shrink: 0;
+  background: var(--dt_color-base-pry);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  margin-left: 6px;
+}
+
+/* Header */
+.slackbot-pane__header {
+  border-bottom: 1px solid var(--dt_color-otl-ter);
+  flex-shrink: 0;
+}
+
+.slackbot-pane__titlebar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.slackbot-pane__titlebar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.slackbot-pane__name {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 4px;
+  border-radius: 8px;
+}
+
+.slackbot-pane__avatar-wrap {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.slackbot-pane__avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.slackbot-pane__title {
+  font-size: var(--dt_static_type-size-title);
+  line-height: var(--dt_static_type-lh-title);
+  font-weight: var(--dt_static_type-weight-black);
+  color: var(--dt_color-content-pry);
+  white-space: nowrap;
+}
+
+.slackbot-pane__actions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.slackbot-pane__action-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--dt_color-otl-ter);
+  background: var(--dt_color-base-pry);
+  padding: 4px;
+  cursor: default;
+}
+
+.slackbot-pane__action-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--dt_color-content-sec);
+}
+
+.slackbot-pane__close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.slackbot-pane__close-btn:hover {
+  background: var(--dt_color-ctr-sec);
+}
+
+.slackbot-pane__close-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--dt_color-content-sec);
+}
+
+/* Tabs */
+.slackbot-pane__tabs {
+  display: flex;
+  align-items: flex-end;
+  height: 36px;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.slackbot-pane__tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 36px;
+  padding: 10px 8px 12px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slackbot-pane__tab--active {
+  border-bottom: 2px solid var(--dt_color-theme-accent);
+}
+
+.slackbot-pane__tab-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.slackbot-pane__tab-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--dt_color-content-pry);
+}
+
+.slackbot-pane__tab-label {
+  font-size: var(--dt_static_type-size-caption);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-bold);
+  color: var(--dt_color-content-pry);
+}
+
+.slackbot-pane__tab-label--inactive {
+  color: var(--dt_color-content-sec);
+}
+
+.slackbot-pane__tab-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 11px 0;
+}
+
+.slackbot-pane__tab-add-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 6px;
+}
+
+.slackbot-pane__tab-add-btn svg {
+  width: 16px;
+  height: 16px;
+  color: var(--dt_color-content-sec);
+}
+
+/* Conversation area */
+.slackbot-pane__conversation {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Message */
+.slackbot-pane__message {
+  display: flex;
+  gap: 8px;
+  padding: 8px 20px;
+  background: var(--dt_color-base-pry);
+}
+
+.slackbot-pane__msg-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.slackbot-pane__msg-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.slackbot-pane__msg-header {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  height: 18px;
+}
+
+.slackbot-pane__msg-sender {
+  font-size: var(--dt_static_type-size-base);
+  line-height: var(--dt_static_type-lh-base);
+  font-weight: var(--dt_static_type-weight-black);
+  color: var(--dt_color-content-pry);
+  white-space: nowrap;
+}
+
+.slackbot-pane__msg-time {
+  font-size: var(--dt_static_type-size-micro);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-sec);
+  white-space: nowrap;
+  padding-top: 3px;
+  padding-bottom: 1px;
+}
+
+.slackbot-pane__msg-text {
+  font-size: var(--dt_static_type-size-base);
+  line-height: var(--dt_static_type-lh-base);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-pry);
+}
+
+.slackbot-pane__msg-text p {
+  margin-bottom: 8px;
+}
+
+.slackbot-pane__msg-text strong {
+  font-weight: var(--dt_static_type-weight-bold);
+}
+
+.slackbot-pane__mention {
+  color: var(--dt_color-content-hgl-1);
+  text-decoration: none;
+}
+
+/* Reply divider */
+.slackbot-pane__reply-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 3px 16px;
+  overflow: hidden;
+}
+
+.slackbot-pane__reply-count {
+  font-size: var(--dt_static_type-size-caption);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-sec);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.slackbot-pane__reply-line {
+  flex: 1;
+  height: 1px;
+  background: var(--dt_color-otl-ter);
+  min-width: 0;
+}
+
+/* Slackbot reply */
+.slackbot-pane__reply {
+  display: flex;
+  gap: 8px;
+  padding: 8px 20px 12px;
+  background: white;
+  flex: 1;
+  min-height: 0;
+}
+
+.slackbot-pane__reply .slackbot-pane__msg-content {
+  overflow-y: auto;
+}
+
+/* Message input */
+.slackbot-pane__input-area {
+  padding: 12px 20px 20px;
+  background: white;
+  flex-shrink: 0;
+}
+
+.slackbot-pane__input {
+  border: 1px solid var(--dt_color-otl-ter);
+  border-radius: 8px;
+  background: var(--dt_color-base-pry);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.slackbot-pane__input-text {
+  display: flex;
+  align-items: flex-start;
+  padding: 9px 12px 7px;
+}
+
+.slackbot-pane__input-cursor {
+  width: 1px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.slackbot-pane__input-placeholder {
+  flex: 1;
+  font-size: var(--dt_static_type-size-base);
+  line-height: var(--dt_static_type-lh-base);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-ter);
+  min-width: 0;
+}
+
+.slackbot-pane__input-bar {
+  display: flex;
+  align-items: flex-start;
+  height: 40px;
+}
+
+.slackbot-pane__input-attach {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 4px 4px 8px;
+  height: 40px;
+}
+
+.slackbot-pane__attach-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slackbot-pane__attach-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--dt_color-otl-ter);
+  position: absolute;
+}
+
+.slackbot-pane__attach-icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.slackbot-pane__attach-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--dt_color-content-sec);
+}
+
+.slackbot-pane__input-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px;
+  min-width: 0;
+}
+
+.slackbot-pane__send-btn {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  border-radius: 4px;
+  background: var(--dt_color-base-pry);
+  overflow: hidden;
+}
+
+.slackbot-pane__send-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  height: 100%;
+}
+
+.slackbot-pane__send-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.slackbot-pane__send-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--dt_color-content-ter);
+}
+
+.slackbot-pane__send-divider-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 0;
+  gap: 1px;
+}
+
+.slackbot-pane__send-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--dt_color-otl-ter);
+}
+
+.slackbot-pane__send-caret {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.slackbot-pane__send-caret svg {
+  width: 20px;
+  height: 20px;
+  color: var(--dt_color-content-ter);
+}

@@ -1,0 +1,55 @@
+:root {
+  /* Base */
+  --dt_color-base-pry: #ffffff;
+  --dt_color-base-ter: #eaeaea;
+
+  /* Container */
+  --dt_color-ctr-pry: #ffffff;
+  --dt_color-ctr-sec: #f8f8f8;
+
+  /* Outline */
+  --dt_color-otl-ter: rgba(94, 93, 96, 0.13);
+
+  /* Content */
+  --dt_color-content-pry: #1d1c1d;
+  --dt_color-content-sec: #454447;
+  --dt_color-content-ter: #77757a;
+  --dt_color-content-hgl-1: #1264a3;
+
+  /* Theme */
+  --dt_color-theme-bg: #4a154b;
+  --dt_color-theme-accent: #83388a;
+  --dt_color-theme-otl-inv-pry: rgba(249, 237, 255, 0.22);
+  --dt_color-theme-inv-pry: #f9edff;
+  --dt_color-theme-inv-sec: #f4daff;
+  --dt_color-theme-inv-ter: rgba(249, 237, 255, 0.6);
+  --dt_color-theme-inv-surface: rgba(249, 237, 255, 0.25);
+
+  /* Reaction bg */
+  --dt_color-reaction-bg: rgba(29, 28, 29, 0.06);
+
+  /* Typography sizes */
+  --dt_static_type-size-title: 18px;
+  --dt_static_type-size-base: 15px;
+  --dt_static_type-size-caption: 13px;
+  --dt_static_type-size-micro: 12px;
+
+  /* Line heights */
+  --dt_static_type-lh-title: 27px;
+  --dt_static_type-lh-base: 22px;
+  --dt_static_type-lh-caption: 18px;
+
+  /* Font weights */
+  --dt_static_type-weight-black: 900;
+  --dt_static_type-weight-bold: 700;
+  --dt_static_type-weight-regular: 400;
+
+  /* Radii */
+  --dt_radius-window: 10px;
+  --dt_radius-card-lg: 20px;
+  --dt_radius-card: 16px;
+  --dt_radius-pill: 8px;
+  --dt_radius-badge: 4px;
+  --dt_radius-reaction: 20px;
+  --dt_radius-avatar: 8px;
+}

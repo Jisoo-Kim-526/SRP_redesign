@@ -1,0 +1,38 @@
+.title-bar {
+  height: 70px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 4px;
+}
+
+.title-bar__left {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title-bar__label {
+  font-size: var(--dt_static_type-size-title);
+  line-height: var(--dt_static_type-lh-title);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-pry);
+}
+
+.title-bar__query {
+  font-size: var(--dt_static_type-size-title);
+  line-height: var(--dt_static_type-lh-title);
+  font-weight: var(--dt_static_type-weight-black);
+  color: var(--dt_color-content-pry);
+}
+
+.title-bar__feedback {
+  font-size: var(--dt_static_type-size-micro);
+  line-height: var(--dt_static_type-lh-caption);
+  font-weight: var(--dt_static_type-weight-regular);
+  color: var(--dt_color-content-hgl-1);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
