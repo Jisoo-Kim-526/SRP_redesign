@@ -7,8 +7,9 @@ import TopResultsSection from './components/TopResultsSection'
 import AllResultsSection from './components/AllResultsSection'
 import SlackbotPane from './components/SlackbotPane'
 import SRPMostly2Layout from './components/SRPMostly2Layout'
+import SRPMostly3Layout from './components/SRPMostly3Layout'
 
-const pages = ['SRP mostly 1', 'SRP mostly 2']
+const pages = ['SRP mostly 1', 'SRP mostly 2', 'SRP mostly 3']
 
 export default function App() {
   const [splitViewOpen, setSplitViewOpen] = useState(false)
@@ -56,6 +57,17 @@ export default function App() {
             <div className="main-content">
               <TitleBar />
               <SRPMostly2Layout />
+            </div>
+          </div>
+        </div>
+      ) : activePage === 2 ? (
+        <div className="slack-window">
+          <TopBar />
+          <div className="slack-body">
+            <NavBar />
+            <div className="main-content">
+              <TitleBar />
+              <SRPMostly3Layout />
             </div>
           </div>
         </div>
